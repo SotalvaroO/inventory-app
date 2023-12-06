@@ -6,7 +6,7 @@ routes = APIRouter(prefix= '/products', tags=['Product'],)
 
 @routes.get('/hola')
 def greet():
-    return "Hola integracion continua"
+    return "Cambio a produccion"
 
 @routes.get('/')
 def get_products_by_name(name: str = ""):
