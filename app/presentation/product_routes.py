@@ -4,6 +4,10 @@ from app.business_logic.product_model import Product,CreateProduct,UpdateProduct
 
 routes = APIRouter(prefix= '/products', tags=['Product'],)
 
+@routes.get('/hola')
+def greet():
+    return "Hola integracion continua"
+
 @routes.get('/')
 def get_products_by_name(name: str = ""):
     return product_service.find_products_by_name(name)
