@@ -52,7 +52,7 @@ jobs:
 
       - name: Actualizar versión en ECS
         run: |
-          aws ecs update-service --cluster logi-dashboard-cluster --service logi-service --task-definition logi-task --force-new-deployment
+          aws ecs update-service --cluster inventory-app-dev-cluster --service inventory-app-dev-service --task-definition inventory-app-dev-task --force-new-deployment
 
 
 
