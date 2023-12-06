@@ -1,8 +1,6 @@
 # image python
 FROM python:3.10.3-slim-buster
 
-# ARG MONGO_URL
-# ENV MONGO_URL $MONGO_URL
 # workspace
 WORKDIR /code
 
@@ -16,4 +14,4 @@ RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 COPY ./app /code/app
 
 # command runs
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80"]
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
